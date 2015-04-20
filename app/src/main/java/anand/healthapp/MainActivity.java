@@ -39,7 +39,7 @@ public class MainActivity extends ActionBarActivity {
         steps.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(this,"Steps ")
+
             }
         });
         weight=(TextView)findViewById(R.id.textView2);
