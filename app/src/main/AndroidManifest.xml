@@ -30,7 +30,9 @@
         </activity>
         <activity
             android:name=".me"
-            android:label="@string/title_activity_me" >
+            android:label="@string/title_activity_me"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
         <activity
             android:name=".MainActivity"
@@ -41,6 +43,7 @@
         <activity
             android:name=".register"
             android:label="@string/title_activity_register"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
         </activity>
     </application>

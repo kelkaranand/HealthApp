@@ -11,4 +11,10 @@
     <string name="title_activity_me">me</string>
     <string name="title_activity_first">first</string>
     <string name="title_activity_register">register</string>
+    <string-array name="devs">
+
+        <item>None</item>
+        <item>JawBone</item>
+        <item>FitBit</item>
+    </string-array>
 </resources>

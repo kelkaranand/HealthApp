@@ -11,6 +11,7 @@ import android.os.Handler;
 
 public class first extends Activity {
 
+    int flag=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,9 +20,17 @@ public class first extends Activity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent main=new Intent(first.this,register.class);
-                first.this.startActivity(main);
-                first.this.finish();
+                Intent main=new Intent(first.this,MainActivity.class);
+                Intent reg=new Intent(first.this,register.class);
+                if(flag==1) {
+                    first.this.startActivity(main);
+                    first.this.finish();
+                }
+                else
+                {
+                    first.this.startActivity(reg);
+                    first.this.finish();
+                }
             }
         },1000);
     }

@@ -1,17 +1,60 @@
 package anand.healthapp;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+import android.widget.LinearLayout;
+import android.app.AlertDialog;
+import android.widget.LinearLayout.LayoutParams;
 
 
 public class me extends ActionBarActivity {
+    ImageView add;
+    ImageView edit;
 
+    String[] s={"FitBit","JawBone"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_me);
+        add=(ImageView)findViewById(R.id.imageView19);
+        edit=(ImageView)findViewById(R.id.imageView18);
+        edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent reg = new Intent(me.this, register.class);
+                startActivity(reg);
+                finish();
+            }
+        });
+
+
+        final ArrayAdapter<String> adp = new ArrayAdapter<String>(me.this,
+                android.R.layout.simple_spinner_item, s);
+
+        final Spinner sp = new Spinner(me.this);
+        sp.setLayoutParams(new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT));
+        sp.setAdapter(adp);
+
+        //final AlertDialog.Builder builder = new AlertDialog.Builder(me.this);
+        //builder.setView(sp);
+        //builder.create().show();
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(me.this);
+                builder.setView(sp);
+                builder.create().show();
+
+            }
+        });
+
     }
 
 
