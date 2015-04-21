@@ -3,4 +3,12 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+
+    <string name="title_activity_water">water</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_food">food</string>
+    <string name="title_activity_me">me</string>
+    <string name="title_activity_first">first</string>
+    <string name="title_activity_register">register</string>
 </resources>

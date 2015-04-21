@@ -1,5 +1,6 @@
 package anand.healthapp;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -34,6 +35,7 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        final Intent iwater=new Intent(this,water.class);
         steps=(TextView)findViewById(R.id.textView);
         steps.setText("STEPS");
         steps.setOnClickListener(new View.OnClickListener() {
@@ -79,6 +81,10 @@ public class MainActivity extends ActionBarActivity {
         water.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                //Intent i=new Intent(this, water.class);
+                startActivity(iwater);
+
 
             }
         });
