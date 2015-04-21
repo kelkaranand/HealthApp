@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="anand.healthapp.me"
-    android:background="#fff5ee">
+    android:background="#ffffff">
 
 
     <ImageView
